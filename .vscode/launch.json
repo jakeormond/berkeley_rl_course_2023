@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/hw1"  // Set the cwd to the hw1 directory
+        },
+        {
+            "name": "Python Debugger: Current File with Arguments",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/hw1",  // Set the cwd to the hw1 directory
+            "args": [
+                "--expert_policy_file",
+                "cs285/policies/experts/Ant.pkl",
+                "--expert_data",
+                "cs285/expert_data/expert_data_Ant-v4.pkl",
+                "--env_name",
+                "Ant-v4",
+                "--exp_name",
+                "Ant_expt_1"
+            ]
+        }
+    ]
+}
